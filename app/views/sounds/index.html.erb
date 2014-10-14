@@ -3,7 +3,7 @@
 <% @sounds.each do |sound| %>
 <li>
 	<%= link_to sound.title, "/sounds/#{sound.id}" %>
-	<%= link_to "Remove Sound", sound, method: :delete %></td>
+	<%= button_to "Remove Sound", sound, method: :delete %></td>
 </li>
 <% end %>
 </ul>

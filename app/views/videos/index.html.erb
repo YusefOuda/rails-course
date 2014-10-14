@@ -3,7 +3,7 @@
 <% @videos.each do |video| %>
 <li>
 	<%= link_to video.title, "/videos/#{video.id}" %>
-	<%= link_to "Remove Video", video, method: :delete %></td>
+	<%= button_to "Remove Video", video, method: :delete %></td>
 </li>
 <% end %>
 </ul>
