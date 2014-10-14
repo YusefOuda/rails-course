@@ -5,3 +5,16 @@
 <param name="allowscriptaccess" value="always"></param>
 <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%=@sound.soundcloud_url%>&amp;enable_api=true&amp;object_id=yourPlayerId" type="application/x-shockwave-flash" width="100%" name="yourPlayerId"></embed>
 </object>
+
+<h2>Comments</h2>
+<% @comments.each do |comment| %>
+	<p><%= comment.content %></p>
+	<%= link_to "Remove Comment", "/sounds/#{@sound.id}/comments/#{comment.id}", method: :delete %>
+<% end %>
+
+<h3>Add a comment</h3>
+<%= form_tag("/sounds/#{@sound.id}/comments", method: "post") do %>
+  <%= label_tag('comment[content]', "Content:") %>
+  <%= text_field_tag('comment[content]') %><br>
+  <%= submit_tag("submit") %>
+<% end %>
