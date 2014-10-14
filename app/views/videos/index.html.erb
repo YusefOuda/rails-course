@@ -1,6 +1,9 @@
 <h2>All Videos:</h2>
 <ul>
 <% @videos.each do |video| %>
-<li><%= link_to video.title, "/videos/#{video.id}" %></li>
+<li>
+	<%= link_to video.title, "/videos/#{video.id}" %>
+	<%= link_to "Remove Video", video, method: :delete %></td>
+</li>
 <% end %>
 </ul>
