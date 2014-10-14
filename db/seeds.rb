@@ -16,7 +16,7 @@ User.create([
   }
   ])
 
-Video.create([
+videos = Video.create([
   {
     title: "Gladiator",
     description: "A great movie",
@@ -46,4 +46,40 @@ Sound.create([
     title: "Sitcom Don",
     soundcloud_url: "https://soundcloud.com/makersquare/sitcom-don"
   }
+])
+
+videos[0].comments.create([
+  {
+    content: "omg this is soooooo cool"
+  },
+  {
+    content: "lol is he ded?"
+  },
+  {
+    content: "faaaaaaaake"
+  },
+])
+
+videos[1].comments.create([
+  {
+    content: "im throwing my money at the screen"
+  },
+  {
+    content: "dislike"
+  },
+  {
+    content: "kony 2012"
+  },
+])
+
+videos[2].comments.create([
+  {
+    content: "plz stop"
+  },
+  {
+    content: "like this if you are cool"
+  },
+  {
+    content: "Wow!!!!!!!"
+  },
 ])
