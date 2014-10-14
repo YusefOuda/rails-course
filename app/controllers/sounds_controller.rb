@@ -30,7 +30,7 @@ class SoundsController < ApplicationController
   def destroy
     @sound = Sound.find(params[:id])
     @sound.destroy
-    redirect_to root_path
+    redirect_to '/sounds'
   end
 
   private

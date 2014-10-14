@@ -40,10 +40,10 @@ Video.create([
 Sound.create([
   {
     title: "MakerSquare",
-    soundcloud_url: "https://soundcloud.com/makersquare/files"
+    soundcloud_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146831498&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
   },
   {
     title: "Sitcom Don",
-    soundcloud_url: "https://soundcloud.com/makersquare/sitcom-don"
+    soundcloud_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146831621&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
   }
 ])
