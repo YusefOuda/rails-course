@@ -14,7 +14,7 @@ class VideosController < ApplicationController
   def create
     video = Video.new(video_params)
     video.save
-    redirect_to root_path
+    redirect_to '/index'
   end
 
   def edit
@@ -24,13 +24,13 @@ class VideosController < ApplicationController
   def update
     @video = Video.find(params[:id])
     @video.update(video_params)
-    redirect_to root_path
+    redirect_to '/index'
   end
 
   def destroy
     @video = Video.find(params[:id])
     @video.destroy
-    redirect_to root_path
+    redirect_to '/index'
   end
 
   private

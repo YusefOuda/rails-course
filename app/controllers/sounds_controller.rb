@@ -14,7 +14,7 @@ class SoundsController < ApplicationController
   def create
     sound = Sound.new(sound_params)
     sound.save
-    redirect_to root_path
+    redirect_to '/index'
   end
 
   def edit
@@ -24,7 +24,7 @@ class SoundsController < ApplicationController
   def update
     @sound = Sound.find(params[:id])
     @sound.update(sound_params)
-    redirect_to root_path
+    redirect_to '/index'
   end
 
   def destroy
@@ -34,7 +34,7 @@ class SoundsController < ApplicationController
   end
 
   private
-  def video_params
+  def sound_params
     params.require(:sound).permit(:title, :soundcloud_url)
   end
 end
