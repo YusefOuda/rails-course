@@ -3,3 +3,16 @@
 <h3><%= @video.description %></h3>
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+
+<h2>Comments</h2>
+<% @comments.each do |comment| %>
+	<p><%= comment.content %></p>
+	<%= link_to "Remove Comment", "/videos/#{@video.id}/comments/#{comment.id}", method: :delete %>
+<% end %>
+
+<h3>Add a comment</h3>
+<%= form_tag("/videos/#{@video.id}/comments", method: "post") do %>
+  <%= label_tag('comment[content]', "Content:") %>
+  <%= text_field_tag('comment[content]') %><br>
+  <%= submit_tag("submit") %>
+<% end %>

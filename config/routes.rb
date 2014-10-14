@@ -1,7 +1,10 @@
 Metube::Application.routes.draw do
   root to: "videos#index"
-  resources :videos
+  resources :videos do 
+    resources :comments, :only => [:create, :destroy]
+  end
   resources :sounds
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
